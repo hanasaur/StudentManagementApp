@@ -6,7 +6,6 @@ void main() {
   runApp(const StudentManagementApp());
 }
 
-// ===================== APP ROOT =====================
 class StudentManagementApp extends StatelessWidget {
   const StudentManagementApp({super.key});
 
@@ -25,7 +24,6 @@ class StudentManagementApp extends StatelessWidget {
   }
 }
 
-// ===================== MODEL =====================
 class Student {
   final String id;
   String name;
@@ -38,7 +36,7 @@ class Student {
   });
 }
 
-// ===================== DASHBOARD SCREEN =====================
+//dashboard
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
 
@@ -139,7 +137,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  // ===================== DIALOG FOR ADD/EDIT =====================
+ //add/edit
   Future<Student?> showStudentDialog(BuildContext context, {Student? student}) {
     final nameController = TextEditingController(text: student?.name ?? '');
     final courseController = TextEditingController(text: student?.course ?? '');
@@ -184,7 +182,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 }
 
-// ===================== DASHBOARD CONTENT =====================
+//dashboard
 class DashboardContent extends StatelessWidget {
   final List<Student> students;
   final VoidCallback onAdd;
@@ -319,7 +317,6 @@ class DashboardContent extends StatelessWidget {
   }
 }
 
-// ===================== STUDENTS PAGE =====================
 class StudentsPage extends StatelessWidget {
   final List<Student> students;
   final VoidCallback onAdd;
@@ -386,7 +383,6 @@ class StudentsPage extends StatelessWidget {
   }
 }
 
-// ===================== SIDEBAR =====================
 class Sidebar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemSelected;
@@ -433,3 +429,4 @@ class Sidebar extends StatelessWidget {
     );
   }
 }
+
